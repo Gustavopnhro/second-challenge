@@ -1,3 +1,5 @@
+
+``` mermaid
 graph TD
   A[{"task": {
       "id_task": 1,
@@ -11,3 +13,5 @@ graph TD
   B-->|initial_date: 10/10/2023|D((Data Inicial: 10/10/2023))
   B-->|final_date: 22/10/2023|E((Data Final: 22/10/2023))
   B-->|description: Separar as roupas amarelas das brancas|F((Descrição: Separar as roupas amarelas das brancas))
+  
+  ```
