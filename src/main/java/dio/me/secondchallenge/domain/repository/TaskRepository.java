@@ -1,9 +1,9 @@
-package dio.me.secondchallenge.repository;
+package dio.me.secondchallenge.domain.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import dio.me.secondchallenge.model.Task;
+import dio.me.secondchallenge.domain.model.Task;
 
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Integer> {

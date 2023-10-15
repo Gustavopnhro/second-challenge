@@ -1,4 +1,4 @@
-package dio.me.secondchallenge.model;
+package dio.me.secondchallenge.domain.model;
 
 
 import jakarta.persistence.Entity;
