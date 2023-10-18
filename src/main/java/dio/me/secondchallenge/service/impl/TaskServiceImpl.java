@@ -1,13 +1,13 @@
 package dio.me.secondchallenge.service.impl;
 
-import java.util.NoSuchElementException;
+
 
 import org.springframework.stereotype.Service;
-
 import dio.me.secondchallenge.domain.model.Task;
 import dio.me.secondchallenge.domain.repository.TaskRepository;
 import dio.me.secondchallenge.service.TaskService;
 
+import java.util.NoSuchElementException;
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -19,18 +19,15 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public Task findById(Integer id) {
+    public Task findById(Long id) {
         return taskRepository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 
     @Override
     public Task create(Task taskToCreate) {
-        if (taskToCreate.getIdTask() != null && taskRepository.existsById(taskToCreate.getIdTask()) ){
-            throw new IllegalArgumentException("Task already exists", null);
+         if (taskRepository.existsByAccountNumber(taskToCreate.getId()) {
+            throw new IllegalArgumentException("This Task already exists.");
         }
-
-        return taskToCreate;
+        return taskRepository.save(taskToCreate);
     }
-    
-
 }
