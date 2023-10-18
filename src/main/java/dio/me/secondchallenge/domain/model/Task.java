@@ -1,16 +1,12 @@
 package dio.me.secondchallenge.domain.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity(name = "tb_task")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idTask;
+    private Long id;
 
     private String name;
     private String priority;
@@ -18,12 +14,12 @@ public class Task {
     private String finalDate;
     private String description;
 
-    public Integer getIdTask() {
-        return idTask;
+    public Long getId() {
+        return id;
     }
 
-    public void setIdTask(Integer idTask) {
-        this.idTask = idTask;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
