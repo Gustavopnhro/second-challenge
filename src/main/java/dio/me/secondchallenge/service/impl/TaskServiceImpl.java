@@ -25,7 +25,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public Task create(Task taskToCreate) {
-         if (taskRepository.existsByAccountNumber(taskToCreate.getId()) {
+         if (taskRepository.existsById(taskToCreate.getId()) {
             throw new IllegalArgumentException("This Task already exists.");
         }
         return taskRepository.save(taskToCreate);
