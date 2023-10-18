@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import dio.me.secondchallenge.domain.model.Task;
 
 @Repository
-public interface TaskRepository extends JpaRepository<Task, Integer> {
-    
+public interface TaskRepository extends JpaRepository<Task, Long> {
+    boolean existsById(Long  taskId); 
 }
